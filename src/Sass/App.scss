@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400px;
+
+    .showcase {
+        background: url('https://images.pexels.com/photos/177557/pexels-photo-177557.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat/ center/cover;
+        height: 400px;
+      
+      }
+      
+      .showcase .overlay {
+        background-color: rgba(0,0,0,0,5);
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+   
+  }
+  
+  

@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    background-color:#c6c6c6;
+    opacity: 0.9;
+    border-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+header:hover {
+    opacity: 1.0;
+  }
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+

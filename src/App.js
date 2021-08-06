@@ -1,24 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import  Header from './components/Header/';
+import Homepage from './veiws/Homepage';
+import CarouselContainer from './components/CarouselContainer/index';
+import Contact from './veiws/Contact';
+import About from './veiws/About';
+import LoginScreen from './components/LoginScreen';
+import DataTable from './veiws/DataTable/index'; 
+import Footer from './components/Footer/index'
+//import { Router } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
+import React, { useReducer, useEffect } from 'react';
+import { AuthContext } from './auth/AuthContext';
+import { authReducer } from './auth/authReducer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const init = () => {
+    return JSON.parse(localStorage.getItem('user')) || { logged: false };
+}
+
+
+function App() {  
+
+  const [ user, dispatch ] = useReducer(authReducer, {}, init);
+
+    useEffect(() => {
+        localStorage.setItem( 'user', JSON.stringify(user) );
+    }, [user])
+
+    return (
+
+      <AuthContext.Provider value={{ user, dispatch }}>
+         <Router> 
+      <Header contact ="contactenos"/>
+            <Switch>
+            <Route path="/datatable">
+             <DataTable/>                    
+          </Route>
+          <Route path="/about">
+            <About />
+            <Footer/>
+          </Route>
+          <Route path="/contact">
+            <Contact/>
+            <Footer/>
+          </Route>
+          <Route path="/login">
+            <LoginScreen/>
+            <Link/>
+            <Footer/>
+          </Route>
+          <Route path="/">
+            <CarouselContainer/> 
+            <Homepage/>            
+          </Route>         
+        </Switch> 
+                
+       </Router>  
+      </AuthContext.Provider>
+
   );
 }
 

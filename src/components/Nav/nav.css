@@ -1,0 +1,20 @@
+.nav{
+    padding: 30px;
+}
+.nav a{
+    text-decoration: none;
+    color:#212121;
+    width: auto;
+    padding: 5px;
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+.nav a:hover{
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+.nav span{
+    margin-left: 10px;
+}
