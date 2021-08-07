@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 export default function Nav(props){
     
     return <div className="nav">
-        <span><Link to="/">Home</Link></span>
+        <span><Link to="/">Login</Link></span>
+        <span><Link to="/home">{props.home}</Link></span>
         <span><Link to="/contact"> {props.contact}</Link></span>
-        <span><Link to="/about">  { props.about}</Link></span>
-        <span><Link to="/login">  { props.login}</Link></span>
+        <span><Link to="/about">  { props.about}</Link></span>        
         <span><Link to="/datatable"> { props.datatable}</Link></span>
     </div>
     

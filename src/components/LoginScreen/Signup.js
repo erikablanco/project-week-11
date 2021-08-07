@@ -16,7 +16,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 
 const Signup = () => {
-    const paperStyle = { padding: 50, width: 300, height: '75vh', width: 350, margin: "0 auto", backgroundColor: '#c6c6c66e' }
+    const paperStyle = { padding: 5, width: 300, height: '75vh', margin: "0 auto", backgroundColor: '#c6c6c66e' }
     const headerStyle = { margin: 0 }
     const avatarStyle = { backgroundColor: '#424242' }
     const marginTop = { marginTop: 5 }

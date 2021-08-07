@@ -40,7 +40,8 @@ const LoginScreen = ({ handleChange }) => {
             <Paper style={paperStyle}>
                 <Grid align='center'>
                     <Avatar style={avatarStyle}><LockOutlinedIcon /></Avatar>
-                    <h2>Sign In</h2>
+                    <h2>Sign In </h2>
+                    
                 </Grid>
                 <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
                     {(props) => (
@@ -68,13 +69,13 @@ const LoginScreen = ({ handleChange }) => {
                     )}
                 </Formik>
                 <Typography >
-                    <Link href="#" >
+                    <Link href="/signup" >
                         Forgot password ?
                 </Link>
                 </Typography>
                 <Typography > Do you have an account ?
-                     <Link href="#" onClick={ () => handleChange("event", 1)} >
-                      Sign Up
+                     <Link href="/signup" onClick={ () => handleChange("event", 1)} >
+                      Signup
                 </Link>
                 </Typography>
             </Paper>

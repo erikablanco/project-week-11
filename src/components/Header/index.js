@@ -12,7 +12,7 @@ export default function Header (){
     return (
         <header className={show ? "sticky" : "Header"}>
         <Logo/>
-        <Nav contact="Contact" about="About" login="Login" datatable="DataTable"/>
+        <Nav contact="Contact" about="About" home="Home" datatable="DataTable"/>
         
          </header>     
     )

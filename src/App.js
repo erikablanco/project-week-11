@@ -47,14 +47,15 @@ function App() {
             <Contact/>
             <Footer/>
           </Route>
-          <Route path="/login">
-            <LoginScreen/>
-            <Link/>
-            <Footer/>
+          <Route path="/home">
+          <CarouselContainer/>
+          <Link/> 
+            <Homepage/>    
           </Route>
           <Route path="/">
-            <CarouselContainer/> 
-            <Homepage/>            
+          <LoginScreen/>
+          <Link to="./home"></Link>
+          <Footer/>                               
           </Route>         
         </Switch> 
                 
